@@ -1,0 +1,36 @@
+{
+   "action": {
+      "default_icon": {
+         "128": "/images/main-icon128.png",
+         "16": "/images/main-icon16.png",
+         "32": "/images/main-icon32.png",
+         "48": "/images/main-icon48.png"
+      },
+      "default_popup": "/dist/popup.index.html"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "all frames": true,
+      "js": [ "dist/content.bundle.js" ],
+      "matches": [ "\u003Call_urls>" ]
+   } ],
+   "description": "Sequential art translator",
+   "host_permissions": [ "\u003Call_urls>" ],
+   "icons": {
+      "128": "/images/main-icon128.png",
+      "16": "/images/main-icon16.png",
+      "32": "/images/main-icon32.png",
+      "48": "/images/main-icon48.png"
+   },
+   "manifest_version": 3,
+   "name": "Sequential Art Translator",
+   "oauth2": {
+      "client_id": "849862836112-r9nk32aai0n9mjeqtn50c14ao9pakltk.apps.googleusercontent.com",
+      "scopes": [ "https://www.googleapis.com/auth/userinfo.email", "https://www.googleapis.com/auth/userinfo.profile" ]
+   },
+   "permissions": [ "storage", "identity", "activeTab" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.0.2.20"
+}
